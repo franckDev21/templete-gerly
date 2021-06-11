@@ -1,0 +1,56 @@
+.banner{
+    position: absolute;
+    background: $gradient-header;
+    height: $banner-height;
+    @media screen and (max-width: $container-size){
+        height: $banner-moy-height;
+    }
+    @media screen and (max-width: $screen-moy){
+        height: $banner-small-height;
+    }
+    @media screen and (max-width: $screen-small){
+        height: 257px;
+    }
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    &__content{
+        //background: #DB464B;
+        @include  center-content;
+        margin-top: -20px;
+        color: $colour-white;
+        font-size: $size-big - 6;
+        @media screen and (max-width: $container-size){
+            font-size: $size-big - 3;
+        }
+        font-weight: bold;
+        max-width: $banner-height + 30;
+        @media screen and (max-width: $screen-moy){
+            font-size: $size-big - 20;
+            max-width: $banner-height - 150;
+        }
+        @media screen and (max-width: $screen-small){
+            margin-top: 0;
+            font-size: $size-moy - 4;
+            max-width: 400px;
+        }
+        @media screen and  (max-width: $screen-small-x){
+            font-size: $size + 1;
+            max-width: 300px;
+        }
+        width: 100%;
+    }
+    &__btn{
+        margin-top: 12rem;
+        @include  center-content;
+        color: $colour-white;
+        font-size: $size;
+        text-transform: uppercase;
+        @include  btn;
+        @media screen and (max-width: 670px){
+            margin-top: 6rem;
+            @include  btn(10px 40px);
+            font-size: $size - 3;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+    text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour:$colour-primary) {
+    border: .16rem solid $colour;
+}
+
+@mixin img-ratio {
+    width: 100%;
+        display: block;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        & img {
+            @include  center-content;
+            width: 100%;
+        }
+}
+
+@mixin  center-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin btn($padding: $padding-btn) {
+    padding: $padding;
+    @include border;
+    color: $colour-white;
+    cursor: pointer;
+    border-radius: $radius-btn;
+    &:hover{
+        background: $colour-primary;
+        color: $colour-white;
+    }
+    &--full-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@mixin carrer($cote: 20px,$bg:transparent){
+    height: $cote !important;
+    width: $cote !important;
+    background-color: $bg;
+}
+
+@mixin rectangle($h: 2px,$w:100%,$bg:transparent){
+    height: $h !important;
+    max-width: $w !important;
+    width: 100%;
+    background-color: $bg;
+}
+
+@mixin  none{
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+@mixin  visible{
+    overflow: auto;
+    width: auto;
+    height: auto;
+    opacity: 1;
+}

@@ -1,0 +1,48 @@
+.me{
+    position: relative;
+    z-index: -1;
+    height: 428px;
+    @media screen and (max-width: $container-size){
+        height: 290px;
+    }
+    @media screen and (max-width: $screen-moy){
+        height: 220px;
+    }
+    @media screen and (max-width: $screen-small){
+        height: 158px;
+    }
+    &__card{
+        position: absolute;
+        background-image: $gradient-dark;
+        overflow: hidden;
+        height: 100%;
+        width: 50%;
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        &--left{
+            left: 0;
+        }
+        &--right{
+            right: 0;
+        }
+    }
+    @media screen and (max-width: 575px){
+        height: auto;
+        &__card{
+            position: static;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > img{
+                position: static;
+            }
+        }
+    }
+
+}

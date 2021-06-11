@@ -1,0 +1,58 @@
+.comment{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: $colour-white;
+	padding: 100px 0;
+	background-image: linear-gradient(to left ,$colour-primary-lighter,$colour-primary-lighter) , url("/assets/img/about-me-img.jpg") ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__title{
+		font-weight: bold;
+		font-size: $size - 3;
+		margin-bottom: 60px;
+	}
+	&__quote{
+		margin-bottom: 60px;
+	}
+	&__message{
+		max-width: 600px;
+		width: calc(100% - 40px);
+		font-size: $size;
+		margin-bottom: 60px;
+	}
+	&__user{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: calc(100% - 20px);
+		max-width: 500px;
+		margin: 0 auto;
+		&--img{
+			border: 1px solid $colour-white;
+			padding: 10px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			position: relative;
+			margin: 5px;
+			& > img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			& > span{
+				position: absolute;
+				color: $colour-white;
+				font-size: $size;
+				bottom: -40px;
+				font-weight: bold;
+			}
+		}
+	}
+}

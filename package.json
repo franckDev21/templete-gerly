@@ -1,0 +1,13 @@
+{
+  "name": "templete",
+  "version": "1.0.0",
+  "description": "integration d'une maquette",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/styles/scss/main.scss:./assets/styles/css/style.css --style compressed",
+    "prefix": "postcss ./assets/styles/css/style.css --use autoprefixer -d ./assets/styles/css/prefixed/"
+  },
+  "author": "Franck Tiomela",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

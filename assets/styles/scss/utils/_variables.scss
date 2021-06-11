@@ -1,0 +1,42 @@
+$colour-primary: #e90e65;
+$colour-primary-lighter: rgba(233, 14, 101, 0.902);
+$colour-primary-lighter-x: #f2d5d7;
+$colour-secondary: #584f53;
+$colour-footer:#282526;
+$colour-fond: #f1f1f1;
+$colour-twitter:#03a9f4;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$container-size: 1140px;
+$screen-moy: 790px;
+$screen-small: 670px;
+$screen-small-x: 406px;
+
+$radius-btn: 3rem;
+
+$banner-height: 727px;
+$banner-moy-height: 510px;
+$banner-small-height: 457px;
+
+$padding-link: 15px 25px;
+$padding-btn: 14px 60px;
+
+$size: 16px;
+$size-big: 52px;
+$size-moy:30px;
+
+$gradient-header:linear-gradient(
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.8),
+                black
+);
+
+$gradient-card-hover:linear-gradient(rgba(0, 0, 0, 0.3), rgba(233, 14, 101, 0.95));
+$gradient-card:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+$gradient-dark:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85));
+
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;

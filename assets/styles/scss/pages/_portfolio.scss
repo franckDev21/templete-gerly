@@ -1,0 +1,112 @@
+.portfolios{
+	background-color: $colour-primary-lighter-x;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-image: url("/assets/img/camera-bg.jpg");
+	.container{
+		overflow: hidden;
+		& > h1{
+			margin: 100px 0 20px 0;
+			text-transform: uppercase;
+			font-size: $size-moy - 7.5;
+		}
+		padding-bottom: 150px;
+	}
+
+}
+.portfolio{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	&__card{
+		overflow: hidden;
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 7px;
+			left: 7px;
+			right: 7px;
+			bottom: 7px;
+			border-radius: 12px;
+			background-image: $gradient-dark;
+		}
+		&:hover{
+			&::after{
+				background-image: $gradient-card-hover;
+			}
+		}
+		border-radius: 20px;
+		position: relative;
+		float: left;
+		padding: 7px;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		min-width: 0;
+		word-wrap: break-word;
+		&--title{
+			z-index: 2;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			text-transform: capitalize;
+			color: $colour-white;
+			font-size: $size;
+			font-weight: bold;
+		}
+		& > img:last-of-type{
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			z-index: 2;
+		}
+		& > img:first-child{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&--box1{
+			width: 32.5%;
+		}
+		&--box2{
+			width: 41%;
+		}
+		&--box3{
+			width: 26.5%;
+		}
+		&--box4{
+			width: 32.5%;
+		}
+		&--multiple{
+			text-align: center;
+			float: left;
+			width: 67.5%;
+			@media screen and (max-width: 580px){
+				width: auto !important;
+				display: inline-block;
+				float: none;
+				margin: 3px auto;
+			}
+		}
+		&--box5{
+			width: 39%;
+		}
+		&--box6{
+			width: 61%;
+		}
+		&--box7{
+			width: 61%;
+		}
+		&--box8{
+			width: 39%;
+		}
+		@media screen and (max-width: 580px){
+			width: auto !important;
+			display: inline-block;
+			float: none;
+			margin: 3px auto;
+		}
+	}
+}

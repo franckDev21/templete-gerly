@@ -1,0 +1,156 @@
+.work{
+    background-color: $colour-primary;
+    padding-bottom: 150px;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        &--title{
+            font-size: $size + 8;
+            text-transform: uppercase;
+            color: $colour-white;
+            font-weight: bold;
+            @media screen and (max-width: 400px ){
+                font-size: 20px;
+            }
+        }
+       &--btns{
+           & > button:not(:last-child){
+               margin-right: 10px;
+           }
+           & > button{
+               background-color: transparent;
+               height: 30px;
+               width: 30px;
+               padding: 10px;
+               position: relative;
+               border: 1px solid $colour-white;
+               border-radius: 50%;
+               cursor: pointer;
+               color: $colour-white;
+               span{
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%,-50%);
+                   color: inherit;
+                   font-size: $size;
+               }
+               transition: .3s background-color ease-in-out, .3s color ease-in-out;
+               &:hover{
+                   background-color: $colour-white;
+                   color: $colour-primary;
+               }
+           }
+       }
+    }
+   &__card{
+       display: flex;
+       justify-content: space-between;
+       padding: 20px 0;
+       &::-webkit-scrollbar{
+           width: 0;
+       }
+       @media screen and (max-width: 790px ){
+           align-items: center;
+           justify-content: center;
+           & .card:nth-child(2){
+               display: none;
+           }
+       }
+       @media screen and (max-width: 975px){
+           & .card:last-child,
+           & .card:nth-child(3){
+               display: none;
+           }
+           & .card:first-child{
+               margin-right: 10px;
+           }
+           & .card:last-child{
+               margin-left: 10px;
+           }
+       }
+       .card{
+           @media screen and (max-width: 1225px){
+               max-width: 235px;
+               width: 100%;
+           }
+           @media screen and (max-width: 1066px){
+               max-width: 225px;
+               width: 100%;
+           }
+           @media screen and (max-width: 1032px){
+               max-width: 205px;
+               width: 100%;
+           }
+           @media screen and (max-width: 975px){
+               width: 100%;
+               max-width: 340px;
+           }
+           @media screen and (max-width: 790px ){
+               width: 100%;
+               max-width: 510px;
+               transform: scale(1.08);
+           }
+           transition: .3s transform ease-in-out;
+           &:hover{
+               transform: scale(1.08);
+               background-image: $gradient-card-hover;
+               &::after{
+                   background-image: $gradient-card-hover;
+               }
+               box-shadow: -1px 2px 5px $colour-footer;
+               & span{
+                   color: rgba(255, 255, 255, 0.55);
+               }
+           }
+           &::after{
+               content: '';
+               display: block;
+               position: absolute;
+               top: 0;
+               left: 0;
+               bottom: 0;
+               right: 0;
+               background-image: $gradient-dark;
+               z-index: 1;
+               transition: .3s;
+           }
+           overflow: hidden;
+           border-radius: 15px;
+           position: relative;
+           .heart{
+               position: absolute;
+               top: 20px;
+               left: 20px;
+               z-index: 2;
+           }
+           &__img{
+               object-fit: cover;
+               z-index: -1;
+               height: 100%;
+               width: 100%;
+           }
+           &__info{
+                z-index: 2;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                //background-color: $colour-white;
+                padding: 20px;
+               h3{
+                   font-size: $size + 2;
+                   color: $colour-white;
+                   margin-bottom: 5px;
+               }
+               span{
+                   font-size: $size - 2;
+                   color: $colour-primary;
+                   transform: none;
+               }
+            }
+       }
+   }
+}

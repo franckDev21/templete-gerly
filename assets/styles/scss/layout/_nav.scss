@@ -1,0 +1,85 @@
+.nav {
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+    top: 30px;
+    //background: #03a9f4;
+    @media screen and (max-width: $screen-small){
+        #check:checked ~ ul{
+            transform: scaleY(1);
+            opacity: 1;
+            @include rectangle(auto,300px, rgba(0, 0, 0, 0.65));
+            position: relative;
+            max-width: 200px;
+            flex-direction: column;
+            text-align: right;
+            background-image: $gradient-header;
+            top: 44px;
+        }
+    }
+    &__btn{
+        position: relative;
+        @include carrer(40px);
+        @include none;
+        @media screen and (max-width: $screen-small){
+            @include  visible;
+        }
+        padding: .25rem .75rem;
+        &--toggle{
+            //@include border;
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+            & > span {
+                position: absolute;
+                @include rectangle(2.5px,75%,$colour-white);
+                border-radius: 2px;
+            }
+            & > span:first-child{
+                transform: translateY(7px) translateX(-2px);
+            }
+            & > span:nth-child(2){
+                @include  center-content;
+            }
+            & > span:last-child{
+                transform: translateY(26px) translateX(-2px);
+            }
+        }
+    }
+    &__link{
+        color: $colour-white;
+        font-size: $size - 2;
+        & > a{
+            display: inline-block;
+            text-transform: uppercase;
+            padding: $padding-link;
+            @media screen and (max-width: $container-size){
+                padding: 15px;
+            }
+            @media screen and (max-width: $screen-moy){
+                padding: 10px;
+            }
+            font-weight: bold;
+            letter-spacing: .5px;
+            &:hover{
+                color: $colour-primary;
+            }
+        }
+        &--active{
+            color: $colour-primary;
+        }
+    }
+    ul{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        max-width: $container-size;
+        margin: 0 auto;
+        @media screen and (max-width: $screen-small){
+            transition: .4s transform ease-in-out;
+            transform-origin: top;
+            transform: scaleY(0);
+            @include none;
+        }
+    }
+}

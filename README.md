@@ -10,11 +10,13 @@
 
 # utilisation et demarage du projet
 
-npm install
+- npm install
+
 **pour les developpeur**
--npm run sass (pour lancer le script de complilation des fichier scss)
--npm run live-server (pour demarer le server)
--npm run prefix (pour creer le fichier compatible avec tous les navigateurs)
+
+- npm run sass (pour lancer le script de complilation des fichier scss)
+- npm run live-server (pour demarer le server)
+- npm run prefix (pour creer le fichier compatible avec tous les navigateurs)
 
 ---
 
